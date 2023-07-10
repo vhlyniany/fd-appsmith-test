@@ -1,0 +1,1 @@
+select allocated_hours as y, p.[project-name] as x from [dbo].[project_allocation] as pa left join projects as p on pa.projects_id=p.id where datasets_id = {{Select1.selectedOptionValue}}

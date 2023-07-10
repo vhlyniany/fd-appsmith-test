@@ -1,0 +1,2 @@
+SELECT CAST(id AS varchar) as value , name as  label FROM dbo.datasets where id is NOT null;
+

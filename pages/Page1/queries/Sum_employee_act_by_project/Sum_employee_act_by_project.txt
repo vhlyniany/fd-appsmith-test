@@ -1,0 +1,2 @@
+Select sum(ac.[actual_hrs]) as y, p.[project-name] as x  from (select * from [dbo].[actual_hours] where datasets_id = {{Select1.selectedOptionValue}}) as ac left join projects p on p.id = ac.projects_id
+group by p.[project-name]

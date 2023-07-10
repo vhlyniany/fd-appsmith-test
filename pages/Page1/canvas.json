@@ -1,0 +1,288 @@
+{
+  "unpublishedPage": {
+    "name": "Page1",
+    "slug": "page1",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 4896,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 610,
+          "containerStyle": "none",
+          "snapRows": 124,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 80,
+          "minHeight": 1292,
+          "dynamicTriggerPathList": [],
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "boxShadow": "none",
+              "iconSVG": "https://appcdn.appsmith.com/static/media/icon.1a5defb3c19b4cac4a27829d1f979e4c.svg",
+              "labelText": "Label",
+              "topRow": 0,
+              "labelWidth": 5,
+              "type": "SELECT_WIDGET",
+              "serverSideFiltering": false,
+              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( `1`))(Select1.options, Select1.serverSideFiltering) }}",
+              "animateLoading": true,
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "defaultOptionValue"
+                },
+                {
+                  "key": "options"
+                }
+              ],
+              "options": "{{Datasets.data}}",
+              "placeholderText": "Select option",
+              "isDisabled": false,
+              "isRequired": false,
+              "dynamicHeight": "FIXED",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "mobileBottomRow": 16,
+              "widgetName": "Select1",
+              "isFilterable": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "options"
+                }
+              ],
+              "displayName": "Select",
+              "searchTags": [
+                "dropdown"
+              ],
+              "bottomRow": 7,
+              "parentRowSpace": 10,
+              "hideCard": false,
+              "mobileRightColumn": 12,
+              "parentColumnSpace": 14.09375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
+              "labelPosition": "Top",
+              "key": "117wbg4qwh",
+              "labelTextSize": "0.875rem",
+              "isDeprecated": false,
+              "rightColumn": 12,
+              "widgetId": "y15f3fd86o",
+              "minWidth": 450,
+              "parentId": "0",
+              "labelAlignment": "left",
+              "renderMode": "CANVAS",
+              "mobileTopRow": 9,
+              "responsiveBehavior": "fill",
+              "mobileLeftColumn": 0,
+              "maxDynamicHeight": 9000,
+              "onOptionChange": "{{project_hours.run({});}}",
+              "minDynamicHeight": 4
+            },
+            {
+              "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+              "mobileBottomRow": 40,
+              "widgetName": "Chart1",
+              "allowScroll": true,
+              "displayName": "Chart",
+              "iconSVG": "https://appcdn.appsmith.com/static/media/icon.04227b3516da60d6462fe38c74f88261.svg",
+              "searchTags": [
+                "graph",
+                "visuals",
+                "visualisations"
+              ],
+              "topRow": 8,
+              "bottomRow": 61,
+              "parentRowSpace": 10,
+              "type": "CHART_WIDGET",
+              "hideCard": false,
+              "mobileRightColumn": 25,
+              "chartData": {
+                "o7wvqxdued": {
+                  "seriesName": "Project allocation",
+                  "data": "{{project_hours.data}}",
+                  "color": "#22c55e"
+                },
+                "q486s8l7ed": {
+                  "seriesName": "Sum of Employees Allocation",
+                  "data": "{{Sum_employee_alloc_by_project.data}}"
+                },
+                "wpmmmwy700": {
+                  "seriesName": "Sum of Employees actual",
+                  "data": "{{Sum_employee_act_by_project.data}}"
+                }
+              },
+              "animateLoading": true,
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "parentColumnSpace": 14.09375,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "chartData.o7wvqxdued.data"
+                },
+                {
+                  "key": "chartData.q486s8l7ed.data"
+                },
+                {
+                  "key": "chartData.wpmmmwy700.data"
+                }
+              ],
+              "customFusionChartConfig": {
+                "type": "column2d",
+                "dataSource": {
+                  "data": [
+                    {
+                      "label": "Product1",
+                      "value": 20000
+                    },
+                    {
+                      "label": "Product2",
+                      "value": 22000
+                    },
+                    {
+                      "label": "Product3",
+                      "value": 32000
+                    }
+                  ],
+                  "chart": {
+                    "caption": "Sales Report",
+                    "xAxisName": "Product Line",
+                    "yAxisName": "Revenue($)",
+                    "theme": "fusion",
+                    "alignCaptionWithCanvas": 1,
+                    "captionFontSize": "24",
+                    "captionAlignment": "center",
+                    "captionPadding": "20",
+                    "captionFontColor": "#231F20",
+                    "legendIconSides": "4",
+                    "legendIconBgAlpha": "100",
+                    "legendIconAlpha": "100",
+                    "legendPosition": "top",
+                    "canvasPadding": "0",
+                    "chartLeftMargin": "20",
+                    "chartTopMargin": "10",
+                    "chartRightMargin": "40",
+                    "chartBottomMargin": "10",
+                    "xAxisNameFontSize": "14",
+                    "labelFontSize": "12",
+                    "labelFontColor": "#716e6e",
+                    "xAxisNameFontColor": "#716e6e",
+                    "yAxisNameFontSize": "14",
+                    "yAxisValueFontSize": "12",
+                    "yAxisValueFontColor": "#716e6e",
+                    "yAxisNameFontColor": "#716e6e"
+                  }
+                }
+              },
+              "key": "83igdrk2th",
+              "isDeprecated": false,
+              "rightColumn": 63,
+              "widgetId": "rb4wpucso4",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "minWidth": 450,
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelOrientation": "auto",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "mobileTopRow": 8,
+              "responsiveBehavior": "fill",
+              "yAxisName": "Hours",
+              "chartName": "Project hours",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "mobileLeftColumn": 1,
+              "xAxisName": "Projects",
+              "chartType": "BAR_CHART"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Page1_Datasets",
+              "name": "Datasets",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_Sum_employee_act_by_project",
+              "name": "Sum_employee_act_by_project",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Select1.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_Sum_employee_alloc_by_project",
+              "name": "Sum_employee_alloc_by_project",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Select1.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_project_hours",
+              "name": "project_hours",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Select1.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Page1",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": []
+  },
+  "deleted": false,
+  "gitSyncId": "64abb67f05fea449feff2ad1_64abb67f05fea449feff2ad3"
+}
