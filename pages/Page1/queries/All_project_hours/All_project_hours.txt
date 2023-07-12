@@ -1,0 +1,14 @@
+select p.id, p.[project-name],  ah.any_project_id, ah.proj_actual, ah.sum_empl_alloc, pa.allocated_hours
+from 
+(
+	select 
+	any_project_id,
+	sum(actual) as proj_actual
+	,sum(allocation) as sum_empl_alloc
+	from any_hours 
+	where any_datasets_id = {{Select1.selectedOptionValue}}
+	group by any_project_id
+) as ah
+left join project_allocation as pa on pa.projects_id = ah.any_project_id
+left join projects p on p.id = ah.any_project_id
+

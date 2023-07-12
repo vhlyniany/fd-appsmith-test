@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 610,
+          "bottomRow": 1640,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -73,7 +73,7 @@
               "searchTags": [
                 "dropdown"
               ],
-              "bottomRow": 7,
+              "bottomRow": 6,
               "parentRowSpace": 10,
               "hideCard": false,
               "mobileRightColumn": 12,
@@ -97,7 +97,7 @@
               "responsiveBehavior": "fill",
               "mobileLeftColumn": 0,
               "maxDynamicHeight": 9000,
-              "onOptionChange": "{{project_hours.run({});}}",
+              "onOptionChange": "{{project_hours.run({});\nAll_project_hours.run()}}",
               "minDynamicHeight": 4
             },
             {
@@ -112,8 +112,8 @@
                 "visuals",
                 "visualisations"
               ],
-              "topRow": 8,
-              "bottomRow": 61,
+              "topRow": 7,
+              "bottomRow": 59,
               "parentRowSpace": 10,
               "type": "CHART_WIDGET",
               "hideCard": false,
@@ -136,7 +136,11 @@
               "animateLoading": true,
               "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
               "parentColumnSpace": 14.09375,
-              "dynamicTriggerPathList": [],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onDataPointClick"
+                }
+              ],
               "leftColumn": 0,
               "dynamicBindingPathList": [
                 {
@@ -205,6 +209,7 @@
                   }
                 }
               },
+              "onDataPointClick": "{{storeValue('proj', Chart1.selectedDataPoint.x);}}",
               "key": "83igdrk2th",
               "isDeprecated": false,
               "rightColumn": 63,
@@ -225,6 +230,656 @@
               "mobileLeftColumn": 1,
               "xAxisName": "Projects",
               "chartType": "BAR_CHART"
+            },
+            {
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "borderColor": "#18181b",
+              "isVisibleDownload": true,
+              "iconSVG": "https://appcdn.appsmith.com/static/media/icon.24905525921dd6f5ff46d0dd843b9e12.svg",
+              "topRow": 61,
+              "isSortable": true,
+              "type": "TABLE_WIDGET_V2",
+              "inlineEditingSaveOption": "ROW_LEVEL",
+              "animateLoading": true,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                },
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.project_name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.any_project_id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.proj_actual.computedValue"
+                },
+                {
+                  "key": "primaryColumns.sum_empl_alloc.computedValue"
+                },
+                {
+                  "key": "primaryColumns.allocated_hours.computedValue"
+                },
+                {
+                  "key": "primaryColumns.EditActions1.saveButtonColor"
+                },
+                {
+                  "key": "primaryColumns.EditActions1.saveBorderRadius"
+                },
+                {
+                  "key": "primaryColumns.EditActions1.discardBorderRadius"
+                },
+                {
+                  "key": "primaryColumns.EditActions1.isSaveDisabled"
+                },
+                {
+                  "key": "primaryColumns.EditActions1.isDiscardDisabled"
+                },
+                {
+                  "key": "primaryColumns.EditActions1.cellBackground"
+                }
+              ],
+              "needsHeightForContent": true,
+              "leftColumn": 0,
+              "delimiter": ",",
+              "defaultSelectedRowIndex": 0,
+              "showInlineEditingOptionDropdown": true,
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisibleFilters": false,
+              "isVisible": true,
+              "enableClientSideSearch": true,
+              "version": 2,
+              "totalRecordsCount": 0,
+              "isLoading": false,
+              "childStylesheet": {
+                "button": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "menuButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "iconButton": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "editActions": {
+                  "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                }
+              },
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "columnUpdatedAt": 1689190712968,
+              "defaultSelectedRowIndices": [
+                0
+              ],
+              "mobileBottomRow": 36,
+              "widgetName": "Table1",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "project_name",
+                "proj_actual",
+                "sum_empl_alloc",
+                "allocated_hours",
+                "id",
+                "any_project_id",
+                "EditActions1"
+              ],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "primaryColumns.EditActions1.isSaveDisabled"
+                },
+                {
+                  "key": "primaryColumns.EditActions1.isDiscardDisabled"
+                }
+              ],
+              "compactMode": "SHORT",
+              "displayName": "Table",
+              "bottomRow": 113,
+              "columnWidthMap": {
+                "project_name": 97,
+                "proj_actual": 178,
+                "sum_empl_alloc": 179,
+                "allocated_hours": 194
+              },
+              "parentRowSpace": 10,
+              "hideCard": false,
+              "mobileRightColumn": 64,
+              "parentColumnSpace": 14.015625,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "primaryColumns.EditActions1.onSave"
+                },
+                {
+                  "key": "onRowSelected"
+                }
+              ],
+              "borderWidth": "1",
+              "primaryColumns": {
+                "id": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 0,
+                  "width": 150,
+                  "originalId": "id",
+                  "id": "id",
+                  "alias": "id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "project_name": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 1,
+                  "width": 150,
+                  "originalId": "project-name",
+                  "id": "project_name",
+                  "alias": "project-name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "project",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"project-name\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "any_project_id": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 2,
+                  "width": 150,
+                  "originalId": "any_project_id",
+                  "id": "any_project_id",
+                  "alias": "any_project_id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "any_project_id",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"any_project_id\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "proj_actual": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 3,
+                  "width": 150,
+                  "originalId": "proj_actual",
+                  "id": "proj_actual",
+                  "alias": "proj_actual",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Sum of actual hours",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"proj_actual\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "sum_empl_alloc": {
+                  "allowCellWrapping": true,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 4,
+                  "width": 150,
+                  "originalId": "sum_empl_alloc",
+                  "id": "sum_empl_alloc",
+                  "alias": "sum_empl_alloc",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Sum of alloc by empl",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"sum_empl_alloc\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "allocated_hours": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 5,
+                  "width": 150,
+                  "originalId": "allocated_hours",
+                  "id": "allocated_hours",
+                  "alias": "allocated_hours",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": true,
+                  "isEditable": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Allocated by project",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"allocated_hours\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "#dcfce7"
+                },
+                "EditActions1": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 6,
+                  "width": 150,
+                  "originalId": "EditActions1",
+                  "id": "EditActions1",
+                  "alias": "EditActions1",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "editActions",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": true,
+                  "label": "Save / Discard",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "",
+                  "sticky": "right",
+                  "validation": {},
+                  "buttonStyle": "rgb(3, 179, 101)",
+                  "cellBackground": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.backgroundColor)))}}",
+                  "saveIconAlign": "left",
+                  "discardIconAlign": "left",
+                  "saveActionLabel": "Save",
+                  "discardActionLabel": "Discard",
+                  "saveButtonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+                  "discardButtonColor": "#F22B2B",
+                  "saveBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+                  "discardBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+                  "discardButtonVariant": "TERTIARY",
+                  "isSaveDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
+                  "isDiscardDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
+                  "onSave": "{{update_project_allocation.run().then(() => {\n  All_project_hours.run();\n});}}"
+                }
+              },
+              "onRowSelected": "{{Employee_by_project.run()}}",
+              "key": "sa1g4yvvqw",
+              "canFreezeColumn": true,
+              "isDeprecated": false,
+              "rightColumn": 57,
+              "textSize": "0.875rem",
+              "widgetId": "m1rphkq7ur",
+              "minWidth": 450,
+              "tableData": "{{All_project_hours.data}}",
+              "label": "Data",
+              "searchKey": "",
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "mobileTopRow": 8,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": false,
+              "responsiveBehavior": "fill",
+              "mobileLeftColumn": 31,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER"
+            },
+            {
+              "boxShadow": "none",
+              "iconSVG": "https://appcdn.appsmith.com/static/media/icon.1a5defb3c19b4cac4a27829d1f979e4c.svg",
+              "labelText": "Project",
+              "topRow": 114,
+              "labelWidth": 5,
+              "type": "SELECT_WIDGET",
+              "serverSideFiltering": false,
+              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( Table1.selectedRow.id))(Select2.options, Select2.serverSideFiltering) }}",
+              "animateLoading": true,
+              "leftColumn": 1,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "options"
+                },
+                {
+                  "key": "defaultOptionValue"
+                }
+              ],
+              "options": "{{Projects.data}}",
+              "placeholderText": "Select option",
+              "isDisabled": false,
+              "isRequired": false,
+              "dynamicHeight": "FIXED",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "mobileBottomRow": 122,
+              "widgetName": "Select2",
+              "isFilterable": true,
+              "displayName": "Select",
+              "searchTags": [
+                "dropdown"
+              ],
+              "bottomRow": 121,
+              "parentRowSpace": 10,
+              "hideCard": false,
+              "mobileRightColumn": 21,
+              "parentColumnSpace": 14.09375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
+              "labelPosition": "Top",
+              "key": "p2vc8y127x",
+              "labelTextSize": "0.875rem",
+              "isDeprecated": false,
+              "rightColumn": 21,
+              "widgetId": "qjjzyd7v3m",
+              "minWidth": 450,
+              "parentId": "0",
+              "labelAlignment": "left",
+              "renderMode": "CANVAS",
+              "mobileTopRow": 115,
+              "responsiveBehavior": "fill",
+              "mobileLeftColumn": 1,
+              "maxDynamicHeight": 9000,
+              "onOptionChange": "{{Employee_by_project.run()}}",
+              "minDynamicHeight": 4
+            },
+            {
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "borderColor": "#E0DEDE",
+              "isVisibleDownload": true,
+              "iconSVG": "https://appcdn.appsmith.com/static/media/icon.24905525921dd6f5ff46d0dd843b9e12.svg",
+              "topRow": 122,
+              "isSortable": true,
+              "type": "TABLE_WIDGET_V2",
+              "inlineEditingSaveOption": "ROW_LEVEL",
+              "animateLoading": true,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                },
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.employee_name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.actual_hrs.computedValue"
+                },
+                {
+                  "key": "primaryColumns.allocation_hrs.computedValue"
+                }
+              ],
+              "needsHeightForContent": true,
+              "leftColumn": 1,
+              "delimiter": ",",
+              "defaultSelectedRowIndex": 0,
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisibleFilters": true,
+              "isVisible": true,
+              "enableClientSideSearch": true,
+              "version": 2,
+              "totalRecordsCount": 0,
+              "isLoading": false,
+              "childStylesheet": {
+                "button": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "menuButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "iconButton": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "editActions": {
+                  "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                }
+              },
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "columnUpdatedAt": 1689193612592,
+              "defaultSelectedRowIndices": [
+                0
+              ],
+              "mobileBottomRow": 150,
+              "widgetName": "Table2",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "employee_name",
+                "actual_hrs",
+                "allocation_hrs"
+              ],
+              "dynamicPropertyPathList": [],
+              "displayName": "Table",
+              "bottomRow": 164,
+              "columnWidthMap": {
+                "employee_name": 200
+              },
+              "parentRowSpace": 10,
+              "hideCard": false,
+              "mobileRightColumn": 35,
+              "parentColumnSpace": 14.09375,
+              "dynamicTriggerPathList": [],
+              "borderWidth": "1",
+              "primaryColumns": {
+                "employee_name": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 0,
+                  "width": 150,
+                  "originalId": "employee-name",
+                  "id": "employee_name",
+                  "alias": "employee-name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "employee-name",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"employee-name\"]))}}",
+                  "sticky": "",
+                  "validation": {}
+                },
+                "actual_hrs": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 1,
+                  "width": 150,
+                  "originalId": "actual_hrs",
+                  "id": "actual_hrs",
+                  "alias": "actual_hrs",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Actual in project",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"actual_hrs\"]))}}",
+                  "sticky": "",
+                  "validation": {}
+                },
+                "allocation_hrs": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 2,
+                  "width": 150,
+                  "originalId": "allocation_hrs",
+                  "id": "allocation_hrs",
+                  "alias": "allocation_hrs",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Allocated in project",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"allocation_hrs\"]))}}",
+                  "sticky": "",
+                  "validation": {}
+                }
+              },
+              "key": "qgjn5c7yx4",
+              "canFreezeColumn": true,
+              "isDeprecated": false,
+              "rightColumn": 51,
+              "textSize": "0.875rem",
+              "widgetId": "zjimapdh30",
+              "minWidth": 450,
+              "tableData": "{{Employee_by_project.data}}",
+              "label": "Data",
+              "searchKey": "",
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "mobileTopRow": 122,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "responsiveBehavior": "fill",
+              "mobileLeftColumn": 1,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER"
             }
           ]
         },
@@ -237,9 +892,38 @@
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_Projects",
+              "name": "Projects",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
             }
           ],
           [
+            {
+              "id": "Page1_All_project_hours",
+              "name": "All_project_hours",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Select1.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_Employee_by_project",
+              "name": "Employee_by_project",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Select1.selectedOptionValue",
+                "Select2.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "Page1_Sum_employee_act_by_project",
               "name": "Sum_employee_act_by_project",

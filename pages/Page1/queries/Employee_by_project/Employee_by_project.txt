@@ -1,0 +1,9 @@
+select e.[employee-name], ah.actual_hrs, al.allocation_hrs from actual_hours as ah
+full outer join 
+allocation_hours as al on ah.datasets_id = al.datasets_id and ah.employees_id = al.employees_id and ah.projects_id = al.projects_id
+left join employees as e on ah.employees_id = e.id
+where ah.datasets_id = {{Select1.selectedOptionValue}} and ah.projects_id = {{Select2.selectedOptionValue}}
+ORDER BY  e.[employee-name] ASC
+
+
+

@@ -1,0 +1,7 @@
+
+UPDATE project_allocation
+   SET allocated_hours = {{Table1.updatedRow.allocated_hours}}
+ WHERE
+  datasets_id = {{Select1.selectedOptionValue}} AND
+	projects_id = {{Table1.updatedRow.any_project_id}}
+

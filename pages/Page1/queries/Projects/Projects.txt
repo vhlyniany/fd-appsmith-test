@@ -1,0 +1,2 @@
+SELECT DISTINCT id as value, [project-name] as label FROM dbo.projects;
+
